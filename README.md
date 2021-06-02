@@ -30,9 +30,15 @@
 ## Directory Structure
 ```
 .
-├── input           # OBIS data packages (.zip) are uploaded here
-├── output          # Reports are generated here.
-├── tmp             # OBIS zip file is extracted here to run checks.
+├── input                   # OBIS data packages (.zip) are uploaded here
+├── output                  # Reports are generated here.
+├── tmp                     # OBIS zip file is extracted here to run checks.
+├── check.py                # Main file
+├── obiscct                 # OBIS Compliance Check Tool
+│   ├── setup.py            # Package import and path definitions
+│   ├── file_checks.py      # File-level Checks
+│   ├── helper.py           # Generic helper functions
+├── requirements.txt
 ├── LICENSE
-├── README.md
+└── README.md
 ```
