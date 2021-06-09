@@ -27,17 +27,20 @@ def names_and_counts():
     """
     files = os.listdir(tmp_path)
     equal = collections.Counter(files) == collections.Counter(expected_files) # Check if two lists are equal irrespective of order
+    msgs = ['']
+    msgs.append('\n## File Checks\n')
+    if equal:
+        msgs.append('\nThe package contains all expected files.\n\n')
+        write_message(msgs)
     if not equal:
-        print("The package should contain 5 files with exact names as following:", *expected_files,sep="\n")
-        print("\n", "#" * 15, "\n")
-        if len(files) == 0:
-            raise Exception("No files found!")
-        else:
-            missing_files = np.setdiff1d(expected_files, files)
-            print("This package is missing the following files:")
-            print(*missing_files,sep="\n")
-            print("\n")
-            raise Exception("OBIS package incomplete!")
+        missing_files = np.setdiff1d(expected_files, files)
+        msgs.append("\nThis package is missing the following files:\n")
+        for mf in missing_files:
+            msgs.append('\n* ' + mf)
+        msgs.append('\n---\n')    
+        msgs.append('**ERROR**: Further validation cannot be completed without the complete package.')
+        write_message(msgs)
+        raise Exception("OBIS package incomplete!")
     return
 
 def validate_header(f):
@@ -52,6 +55,7 @@ def validate_header(f):
     df = pd.read_csv(tmp_path + f)
     hdrs = list(df.columns)
     equal = collections.Counter(hdrs) == collections.Counter(col_headers[core])
+    msgs = []
     if not equal:
         print("Error: " + f)
         raise Exception("Column headers for this file do not match the expected headers in setup file!")

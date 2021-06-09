@@ -6,8 +6,8 @@ def create_report(file):
     dt = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " local time."
     f = open(out_path + file.split(".")[0] + "_Report.md", "w")
     f.write("# OBIS Compliance Check Report\n")
-    f.write("OBIS Package Name: {}\n".format(file))
-    f.write('Package uploaded at {}\n'.format(dt))
+    f.write("\nOBIS Package Name: {}\n".format(file))
+    f.write('\nPackage uploaded at {}\n'.format(dt))
     f.write('\n---\n')
     f.write("This report is generated using the obis-compliance package.\n")
     f.write("For more details, please go to the following link: https://github.com/HarrySng/obis-compliance\n")
@@ -39,7 +39,6 @@ def write_missing_fields(core, mf):
         else:
             for i in range(len(v)):
                 msgs.append(k + " | " + list(v[i].keys())[0] + " | "+ str(len(list(v[i].values())[0])) + "\n")
-    msgs.append('\n---\n')
     write_message(msgs)
     return
 
