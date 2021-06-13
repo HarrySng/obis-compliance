@@ -8,8 +8,10 @@ from obiscct import hierarchy_checks
 def wrapper(file = 'obisdata.zip'): # Default for testing
     create_report(file) # Initiate a file with header info
     # File level checks
+    expected_files = get_expected_files()
     file_checks.extract_file(file)
     file_checks.names_and_counts() # Will raise exception and stop code execution if files incomplete
+    write_message(['## Header Checks\n'])
     for f in expected_files: # Iterate over each file
         file_checks.validate_header(f) # Validate headers. Function only checks csv files
     # Field level checks

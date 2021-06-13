@@ -26,6 +26,7 @@ def names_and_counts():
     Raises exception if mismatch and stop code execution of wrapper.
     """
     files = os.listdir(tmp_path)
+    expected_files = get_expected_files()
     equal = collections.Counter(files) == collections.Counter(expected_files) # Check if two lists are equal irrespective of order
     msgs = ['']
     msgs.append('\n## File Checks\n')
@@ -54,9 +55,13 @@ def validate_header(f):
     core = f.split(".")[0] # Extract name without extension for use with dict objects in setup file
     df = pd.read_csv(tmp_path + f)
     hdrs = list(df.columns)
-    equal = collections.Counter(hdrs) == collections.Counter(col_headers[core])
+    col_headers = get_headers(core)
+    equal = collections.Counter(hdrs) == collections.Counter(col_headers)
     msgs = []
     if not equal:
         print("Error: " + f)
         raise Exception("Column headers for this file do not match the expected headers in setup file!")
+    else:
+        msgs.append('\nThe **{}** file contains all expected headers.\n\n'.format(f))
+        write_message(msgs)
     return

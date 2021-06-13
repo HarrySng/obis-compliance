@@ -1,0 +1,131 @@
+# OBIS Pakcage Files
+
+- expected_files:
+  - event.csv
+  - occurrence.csv
+  - extendedmeasurementorfact.csv
+  - eml.xml
+  - meta.xml
+
+# Headers of csv files
+- headers:
+  event:
+    - eventID
+    - parentEventID
+    - eventRemarks
+    - eventDate
+    - modified
+    - type
+    - habitat
+    - decimalLatitude
+    - decimalLongitude
+    - minimumDepthInMeters
+    - maximumDepthInMeters
+    - verbatimCoordinateSystem
+    - geodeticDatum
+    - footprintWKT
+  occurrence:
+    - occurrenceID
+    - eventID
+    - eventRemarks
+    - type
+    - basisOfRecord
+    - recordedBy
+    - occurrenceStatus
+    - vernacularName
+    - scientificName
+    - identificationQualifier
+    - scientificNameID
+    - scientificNameAuthorship
+    - nomenclaturalCode
+    - taxonRank
+    - behavior
+    - associatedMedia
+    - institutionCode
+    - collectionCode
+    - bibliographicCitation
+  extendedmeasurementorfact:
+    - eventID
+    - occurrenceID
+    - measurementID
+    - measurementType
+    - measurementTypeID
+    - measurementValue
+    - measurementValueID
+    - measurementUnit
+    - measurementUnitID
+    - measurementMethod
+
+- required_fields:
+  # Required fields in Event core
+  event:
+    obis:
+      - eventDate
+      - decimalLatitude
+      - decimalLongitude
+    cioos:
+      - eventID
+      - modified
+      - type
+      - verbatimCoordinateSystem
+      - geodeticDatum
+    onc:
+    rec:
+      - parentEventID
+      - eventRemarks
+      - minimumDepthInMeters
+      - maximumDepthInMeters
+  # Required fields in Occurrence core
+  occurrence:
+    obis:
+      - occurrenceID
+      - basisOfRecord
+      - occurrenceStatus
+      - scientificName
+      - scientificNameID
+    cioos:
+      - eventID
+      - type
+      - recordedBy
+      - institutionCode
+    onc:
+      - vernacularName
+      - scientificNameAuthorship
+      - nomenclaturalCode
+      - taxonRank
+      - associatedMedia
+      - bibliographicCitation
+    rec:
+      - identificationQualifier
+  # Required fields in EMOF core
+  extendedmeasurementorfact:
+    obis:
+    cioos:
+      - eventID
+      - measurementID
+      - measurementType
+      - measurementValue
+    onc:
+    rec:     
+  # Required fields in EML file
+  eml:
+    obis:
+      - alternativeIdentifier
+      - title
+      - langauge
+      - abstract
+      - keyword
+      - keywordThesaurus
+      - geographicDescription
+      - westBoundingCoordinate
+      - eastBoundingCoordinate
+      - northBoundingCoordinate
+      - southBoundingCoordinate
+      - maintenanceUpdateFrequency
+      - contact
+      - surName
+      - organizationName
+      - electronicMailAddress
+    cioos:
+    onc:
+    rec:  
