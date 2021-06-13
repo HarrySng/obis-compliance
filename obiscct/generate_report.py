@@ -6,7 +6,7 @@ def create_report(file):
     dt = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " local time."
     f = open(out_path + file.split(".")[0] + "_Report.md", "w")
     f.write("# OBIS Compliance Check Report\n")
-    f.write("\nOBIS Package Name: {}\n".format(file))
+    f.write("\nOBIS Package Name: **{}**\n".format(file))
     f.write('\nPackage uploaded at {}\n'.format(dt))
     f.write('\n---\n')
     f.write("This report is generated using the obis-compliance package.\n")
@@ -31,7 +31,7 @@ def write_missing_fields(core, mf):
     msgs.append('\n---\n')
     msgs.append('### Missing fields for the **{}** core\n\n'.format(core))
     msgs.append('Required by | Field | No. of missing values\n')
-    msgs.append('--- | --- | ---\n')
+    msgs.append(':---: | :---: | :---:\n')
     for k in list(mf.keys()):
         v = mf[k]
         if len(v) < 1:
@@ -42,5 +42,12 @@ def write_missing_fields(core, mf):
     write_message(msgs)
     return
 
-
-    print(len(list(v[i].values())[0]))
+def write_coordinates_depth(crd):
+    msgs = []
+    msgs.append('### Bounding Coordinates and Depth of the records.\n\n')
+    msgs.append('&nbsp; | Latitude | Longitude | Minimum Depth (m) | Maximum Depth (m)\n')
+    msgs.append(':---: | :---: | :---: | :---: | :---:\n')
+    msgs.append('**Minimum** | ' + str(crd['decimalLatitude'][0]) + ' | ' + str(crd['decimalLongitude'][0]) + ' | ' + str(crd['minimumDepthInMeters'][0]) + ' | ' + str(crd['maximumDepthInMeters'][0]) + '\n')
+    msgs.append('**Maximum** | ' + str(crd['decimalLatitude'][1]) + ' | ' + str(crd['decimalLongitude'][1]) + ' | ' + str(crd['minimumDepthInMeters'][1]) + ' | ' + str(crd['maximumDepthInMeters'][1]) + '\n')
+    write_message(msgs)
+    return
