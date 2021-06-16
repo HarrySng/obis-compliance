@@ -30,3 +30,18 @@ def get_headers(core):
 def get_required_fields(core):
     required_fields = yaml_data[2][core]
     return required_fields
+
+
+def get_bounds():
+    bounds = {}
+    for k in ['decimalLatitude', 'decimalLongitude']:
+        bounds[k] = yaml_data[3][k]
+    """
+    Repeat depth into these two variables. 
+    This is to get a single input from user.
+    Keeping things simple for the user and handling it here.
+    These keys will be called as is in numerical_checks.
+    """
+    bounds['minimumDepthInMeters'] = yaml_data[3]['DepthInMeters']
+    bounds['maximumDepthInMeters'] = yaml_data[3]['DepthInMeters']
+    return bounds

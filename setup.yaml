@@ -129,3 +129,14 @@
     cioos:
     onc:
     rec:  
+
+- coordinates:
+  decimalLatitude:
+    - 45              # Minimum latitude
+    - 48              # Maximum latitude
+  decimalLongitude:
+    - -128            # Minimum longitude
+    - -124            # Maximum longitude
+  DepthInMeters:      # Depth is measured from surface
+    - 0               # Minimum depth
+    - 2500            # Maximum depth
