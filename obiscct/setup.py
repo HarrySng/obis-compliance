@@ -19,6 +19,7 @@ with open("setup.yaml", "r") as stream:
     except yaml.YAMLError as E:
         print(E)
 
+
 def get_expected_files():
     expected_files = yaml_data[0]['expected_files']
     return expected_files
@@ -33,15 +34,19 @@ def get_required_fields(core):
 
 
 def get_bounds():
+    
     bounds = {}
     for k in ['decimalLatitude', 'decimalLongitude']:
         bounds[k] = yaml_data[3][k]
+    
     """
     Repeat depth into these two variables. 
     This is to get a single input from user.
     Keeping things simple for the user and handling it here.
     These keys will be called as is in numerical_checks.
     """
+    
     bounds['minimumDepthInMeters'] = yaml_data[3]['DepthInMeters']
     bounds['maximumDepthInMeters'] = yaml_data[3]['DepthInMeters']
+    
     return bounds

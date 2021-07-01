@@ -3,14 +3,20 @@ certifi==2021.5.30
 cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1613413863336/work
 chardet @ file:///home/conda/feedstock_root/build_artifacts/chardet_1602255302154/work
 cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1616851485986/work
+cycler==0.10.0
 idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+kiwisolver==1.3.1
+matplotlib==3.4.2
 numpy @ file:///home/conda/feedstock_root/build_artifacts/numpy_1622014603188/work
 pandas==1.2.4
+Pillow==8.2.0
 pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
 pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
+pyparsing==2.4.7
 PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1610291451001/work
 python-dateutil==2.8.1
 pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1612179539967/work
+PyYAML==5.4.1
 requests @ file:///tmp/build/80754af9/requests_1592841827918/work
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
 urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1603125704209/work

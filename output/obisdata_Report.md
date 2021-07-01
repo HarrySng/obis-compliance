@@ -2,7 +2,7 @@
 
 OBIS Package Name: **obisdata.zip**
 
-Package uploaded at 2021-06-16 15:23:57 local time.
+Package uploaded at 2021-07-01 14:30:35 local time.
 
 ---
 This report is generated using the obis-compliance package.
@@ -36,6 +36,7 @@ obis | decimalLongitude | 4
 rec | parentEventID | 1
 rec | minimumDepthInMeters | 3
 rec | maximumDepthInMeters | 3
+* *Warning*! 1 record(s) is/are missing both coordinates and footprintWKT fields.
 
 ---
 ### Missing fields for the **occurrence** core
@@ -91,3 +92,30 @@ According to bounds defined in setup file for **minimumDepthInMeters** [0, 2500]
 According to bounds defined in setup file for **maximumDepthInMeters** [0, 2500]:
 * All values are within the minimum threshold.
 * *Warning*! 2 values are beyond the maximum threshold.
+
+## FootprintWKT Centroid Checks
+eventID | Centroid in File | Calculated Centroid
+:---: | :---: | :---:
+2741 | -128.02909, 47.85035 | -128.0290895, 47.850352
+1950 | 128.02909, 47.85035 | -128.0290895, 47.850352
+VS000106 | nan, nan | -128.0290895, 47.850352
+VS000107 | nan, nan | -128.0290895, 47.850352
+VS000108 | nan, nan | -128.0290895, 47.850352
+1940 | -128.02909, 47.85035 | -128.0290895, 47.850352
+
+**WARNING**: The footprintWKT field of the following eventIDs could not be parsed. Please check their format.
+* eventID: 2731
+
+---
+## Date Checks
+
+### Date Checks for 'eventDate' field.
+* Earliest Date: 2018-07-21 00:00:00
+* Latest Date: 2018-08-05 00:00:00
+
+### Date Checks for 'modified' field.
+* Earliest Date: 2018-07-29 18:11:27
+* Latest Date: 2020-07-28 22:44:00
+
+---
+## Taxonomic Checks

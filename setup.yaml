@@ -140,3 +140,4 @@
   DepthInMeters:      # Depth is measured from surface
     - 0               # Minimum depth
     - 2500            # Maximum depth
+

@@ -12,3 +12,21 @@ def get_column(core, hdr):
     df = pd.read_csv(tmp_path + core + ".csv", dtype=str)
     col = df[hdr].tolist() # Extract column and convert to list
     return col
+
+def calculate_centroid(coords):
+    """[summary]
+
+    Args:
+        coords ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
+
+    lons = []
+    lats = []
+    for c in coords:
+        lons.append(float(c[0]))
+        lats.append(float(c[1]))
+
+    return [sum(lons)/len(lons), sum(lats)/len(lats)]
