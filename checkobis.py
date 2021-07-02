@@ -6,6 +6,7 @@ from obiscct import field_checks
 from obiscct import hierarchy_checks
 from obiscct import date_checks
 from obiscct import numerical_checks
+from obiscct import taxon_checks
 
 def wrapper(file = 'obisdata.zip'): # Default for testing
     
@@ -49,6 +50,7 @@ def wrapper(file = 'obisdata.zip'): # Default for testing
     # Taxon Checks
     write_message('\n---\n')
     write_message(['## Taxonomic Checks\n']) # Implemented in taxon_checks.py
+    taxon_checks.check_scientific_names()
     
     return
 

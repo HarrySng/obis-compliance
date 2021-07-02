@@ -2,7 +2,7 @@
 
 OBIS Package Name: **obisdata.zip**
 
-Package uploaded at 2021-07-01 14:30:35 local time.
+Package uploaded at 2021-07-02 01:26:40 local time.
 
 ---
 This report is generated using the obis-compliance package.
@@ -119,3 +119,27 @@ VS000108 | nan, nan | -128.0290895, 47.850352
 
 ---
 ## Taxonomic Checks
+The scientificNameID field for the following records did not match the Aphia Record.
+
+occurrenceID | eventID | scientificName | scientificNameID In File | scientificNameID in Aphia Record
+:---: | :---: | :---: | :---: | :---:
+826061 | 561921 | Pectis | urn:lsid:marinespecies.org:taxname:231550 | urn:lsid:marinespecies.org:taxname:1371
+
+---
+The scientificNameAuthorship field for the following records did not match the Aphia Record.
+
+occurrenceID | eventID | scientificName | scientificNameAuthorship In File | scientificNameAuthorship in Aphia Record
+:---: | :---: | :---: | :---: | :---:
+825711 | 561631 | Dosidicus gigas | (dOrbigny [in 1834-1847], 1835) | Gill, 1893
+
+---
+The bibliographicCitation field for the following records did not match the Aphia Record.
+
+occurrenceID | eventID | scientificName | bibliographicCitation In File | bibliographicCitation in Aphia Record
+:---: | :---: | :---: | :---: | :---:
+816441 | 552751 | Actinopterygii | WoRMS (2020). Actinopterygii. Accessed at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=10194 on 2021-01-04 | WoRMS (2021). Actinopterygii. Accessed at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=10194 on 2021-07-02
+816581 | 552891 | Myctophidae | Froese, R. and D. Pauly. Editors. (2020). FishBase. Myctophidae Gill, 1893. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=125498 on 2021-01-04 | Froese, R. and D. Pauly. Editors. (2021). FishBase. Myctophidae Gill, 1893. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=125498 on 2021-07-02
+14373320 | 5037810 | Pyrosoma | Madin, L. (2020). World List of Thaliacea. Pyrosoma Péron, 1804. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=137224 on 2021-01-04 | Madin, L. (2021). World List of Thaliacea. Pyrosoma Péron, 1804. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=137224 on 2021-07-02
+826061 | 561921 | Pectis | Schuchert, P. (2021). World Hydrozoa Database. Voragonema Naumov, 1971. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=231550 on 2021-01-15 | Schuchert, P. (2021). World Hydrozoa Database. Siphonophorae. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=1371 on 2021-07-02
+
+---
