@@ -6,6 +6,7 @@ from obiscct import field_checks
 from obiscct import hierarchy_checks
 from obiscct import date_checks
 from obiscct import numerical_checks
+from obiscct import vocab_checks
 from obiscct import taxon_checks
 
 def wrapper(file = 'obisdata.zip'): # Default for testing
@@ -46,6 +47,11 @@ def wrapper(file = 'obisdata.zip'): # Default for testing
     write_message(['## Date Checks\n']) # Implemented in date_checks.py
     for col in ['eventDate','modified']:
         date_checks.check_date_format(col)
+    
+    # Vocabulary Checks
+    write_message('\n---\n')
+    write_message(['## Vocabulary Checks\n'])
+    vocab_checks.check_p06()
 
     # Taxon Checks
     write_message('\n---\n')

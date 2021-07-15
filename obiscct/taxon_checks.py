@@ -8,7 +8,7 @@ def check_scientific_names(f = 'occurrence.csv'):
     df = pd.read_csv(tmp_path + f)
     sc_names = df['scientificName'].tolist()
 
-    cache_records = {}
+    cache_records = {} # Do not send GET request if request for same record sent earlier
     missing_id = [] # Indices of scientific names which returned bad response for Aphia IDs
     mismatches = {
         'scientificNameID': [],
