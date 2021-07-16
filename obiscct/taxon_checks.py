@@ -1,6 +1,6 @@
 from .setup import *
 from .helpers import *
-from.generate_report import *
+from .generate_report import *
 
 def check_scientific_names(f = 'occurrence.csv'):
     
