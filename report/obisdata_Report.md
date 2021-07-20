@@ -2,7 +2,7 @@
 
 OBIS Package Name: **obisdata.zip**
 
-Package uploaded at 2021-07-20 10:13:13 local time.
+Package uploaded at 2021-07-20 10:31:14 local time.
 
 ---
 This report is generated using the obis-compliance package.
@@ -152,5 +152,7 @@ occurrenceID | eventID | scientificName | bibliographicCitation In File | biblio
 816581 | 552891 | Myctophidae | Froese, R. and D. Pauly. Editors. (2020). FishBase. Myctophidae Gill, 1893. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=125498 on 2021-01-04 | Froese, R. and D. Pauly. Editors. (2021). FishBase. Myctophidae Gill, 1893. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=125498 on 2021-07-20
 14373320 | 5037810 | Pyrosoma | Madin, L. (2020). World List of Thaliacea. Pyrosoma Péron, 1804. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=137224 on 2021-01-04 | Madin, L. (2021). World List of Thaliacea. Pyrosoma Péron, 1804. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=137224 on 2021-07-20
 826061 | 561921 | Pectis | Schuchert, P. (2021). World Hydrozoa Database. Voragonema Naumov, 1971. Accessed through: World Register of Marine Species at: http://www.marinespecies.org/aphia.php?p=taxdetails&id=231550 on 2021-01-15 | Schuchert, P. (2021). World Hydrozoa Database. Siphonophorae. Accessed through: World Register of Marine Species at: https://www.marinespecies.org/aphia.php?p=taxdetails&id=1371 on 2021-07-20
+
+Note: Citation text following "Accessed at" is not compared.
 
 ---
