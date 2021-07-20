@@ -76,7 +76,8 @@ def check_scientific_names(f = 'occurrence.csv'):
                 scientificName = df['scientificName'][i]
                 true_record = true_records[k][i]
                 msgs.append('{} | {} | {} | {} | {}\n'.format(occurrenceID,eventID,scientificName,df[k][i], true_record))
+            if k == 'bibliographicCitation':
+                msgs.append('\nNote: Citation text following "Accessed at" is not compared.\n')
             msgs.append('\n---\n')
         write_message(msgs)
-    
     return
