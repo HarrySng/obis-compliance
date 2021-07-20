@@ -13,9 +13,13 @@ def wrapper(file = 'obisdata.zip'): # Default for testing
     
     create_report(file) # Initiate a file with header info
     
+    # Process DEM
+    os.system('./dem/dem {}'.format(dem)) # Run go binary to process ascii
+    # To do: Handle exceptions
+
     # File Level checks
     expected_files = get_expected_files()
-    #file_checks.extract_file(file)
+    file_checks.extract_file(file)
     file_checks.names_and_counts() # Will raise exception and stop code execution if files incomplete
     
     # File Header Checks

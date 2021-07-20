@@ -12,8 +12,9 @@ from zipfile import ZipFile
 from datetime import datetime
 
 in_path = './input/'
-out_path = './output/'
+out_path = './report/'
 tmp_path = './tmp/'
+dem = 'EndeavourAUVCentral1'
 
 with open("setup.yaml", "r") as stream:
     try:
